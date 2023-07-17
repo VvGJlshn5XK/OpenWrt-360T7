@@ -13,10 +13,15 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-# Add feed sources
+# Add a feed source
+#echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 sed -i '$a src-git-full small https://github.com/kenzok8/small-package' feeds.conf.default
-git clone https://github.com/CHN-beta/rkp-ipid package/rkp-ipid
-git clone https://github.com/Zxilly/UA2F package/UA2F
+
+# 添加第三方软件包
+#git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+#git clone https://github.com/kenzok8/small-package package/small-package
+
 # theme
 # git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 # rm -rf package/luci-theme-argon/README* package/luci-theme-argon/Screenshots/
